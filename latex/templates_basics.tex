@@ -1,24 +1,40 @@
 \newpage
 \part{Basics}\label{basics}
 
-A template is a recipe, a blueprint that will generate code at your command and according to compile-time parameters you'll give. Templates are \emph{parameterized code}. Each template definition is written once in a module and can then be instantiated many times with different parameters, possibly resulting in quite different code, depending on the arguments you used.
+Une template est une recette, un modèle qui va engendrer du code à la compilation selon des paramètres que vous lui donnerez. Les templates sont du \emph{code paramétré}. Chaque définition est écrite une seule fois dans un module et peut être intanciée plusieurs fois avec des paramètres différents pour produire un code qui dépendra des paramètres que vous utiliserez.
+
+%A template is a recipe, a blueprint that will generate code at your command and according to compile-time parameters you'll give. Templates are \emph{parameterized code}. Each template definition is written once in a module and can then be instantiated many times with different parameters, possibly resulting in quite different code, depending on the arguments you used.
 
 \section{Template Declarations}\label{declarations}
 
-Here is the syntax for a template declaration:
+Voici la syntaxe pour déclarer une template :
+
+%Here is the syntax for a template declaration:
+
+%\index{template!declaration}
+%\index{syntax!template declaration}
+%\begin{dcode}
+%template templateName(list, of, parameters)
+%{
+%  // Some syntactically correct declarations here
+%  // The arguments are accessible inside the template scope.
+%}
+%\end{dcode}
+
 
 \index{template!declaration}
 \index{syntax!template declaration}
 \begin{dcode}
-template templateName(list, of, parameters)
+template nomDeTemplate(liste, de, parametres)
 {
-  // Some syntactically correct declarations here
-  // The arguments are accessible inside the template scope.
+  // Declarations syntaxiquement correctes ici.
+  // Les parametres sont accessible dans ce bloc.
 }
 \end{dcode}
 
+\DD{NomDeTemplate} est un simple identifiant en code D et la liste de paramètres template est séparée par des virgules et de longueur zéro ou plus. 
 
-\DD{templateName} is your usual D identifier and the list of parameters is a comma-separated list of zero or more template parameters. These can be:
+%\DD{templateName} is your usual D identifier and the list of parameters is a comma-separated list of zero or more template parameters. These can be:
 
 \begin{description}
 
